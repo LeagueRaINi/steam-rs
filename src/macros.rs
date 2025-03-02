@@ -119,7 +119,7 @@ macro_rules! optional_argument {
 
     ($key:ident, $rename:literal) => {
         match $key {
-            Some(value) => format!("&{}={}", stringify!($rename), value),
+            Some(value) => format!("&{}={}", $rename, value),
             None => String::new()
         }
     };
@@ -130,8 +130,6 @@ macro_rules! optional_argument {
             None => format!("{}", optional_argument!($($rest),*) )
         }
     };
-
-
 }
 
 pub(crate) use optional_argument;

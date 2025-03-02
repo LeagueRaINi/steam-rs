@@ -25,8 +25,8 @@ async fn main() {
     }*/
 
     let applist = steam.get_store_app_list(
-        None, None, None, None, None, None, None, None, None
+        None, None, None, None, None, None, None, None, Some(50000)
     ).await.unwrap();
 
-    println!("{:?}", applist);
+    println!("Got {} apps", applist.apps.len());
 }
