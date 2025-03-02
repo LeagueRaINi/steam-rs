@@ -21,7 +21,7 @@ struct Wrapper {
 #[derive(Deserialize, Serialize, Debug)]
 pub struct AppList {
     pub apps: Vec<App>,
-    pub have_more_results: bool,
+    pub have_more_results: Option<bool>,
     pub last_appid: u32,
 }
 
