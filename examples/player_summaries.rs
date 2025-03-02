@@ -28,5 +28,5 @@ async fn main() {
         None, None, None, None, None, None, None, None, Some(50000)
     ).await.unwrap();
 
-    println!("Got {} apps", applist.apps.len());
+    println!("{:?}", applist);
 }
