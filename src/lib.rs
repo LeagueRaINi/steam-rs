@@ -72,6 +72,7 @@ pub mod steam_user;
 pub mod steam_user_auth;
 pub mod steam_user_stats;
 pub mod steam_webapi_util;
+pub mod store_service;
 
 pub mod errors;
 mod macros; // This remains private

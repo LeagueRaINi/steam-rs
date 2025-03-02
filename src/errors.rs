@@ -77,6 +77,10 @@ error!(SteamUserAuthError{
     AuthenticateUserTicket(String)
 });
 
+error!(StoreServiceError{
+    GetAppList(String)
+});
+
 macro_rules! ErrorHandle {
     ($function:expr, $error:expr) => {
         $function.map_err(move |error| $error(error.to_string()))?

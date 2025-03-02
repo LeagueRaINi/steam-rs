@@ -77,3 +77,5 @@ Interfaces that are prefixed with ✓ are fully implemented!
 ## ✓ ISteamWebAPIUtil
   - [x] GetServerInfo
   - [x] GetSupportedAPIList
+## ✓ IStoreService
+  - [] GetAppList

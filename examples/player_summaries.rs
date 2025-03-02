@@ -9,7 +9,7 @@ async fn main() {
     let steam = Steam::new(steam_api_key);
 
     // Request the player summaries of SteamIDs `76561198136162943` and `76561197960435530`.
-    let steam_ids = vec![
+    /*let steam_ids = vec![
         SteamId::new(76561198136162943), // Garrett Howard
         SteamId(76561197960435530),      // Robin Walker
     ];
@@ -22,5 +22,11 @@ async fn main() {
             "{:?}'s SteamID is {:?}",
             player.persona_name, player.steam_id
         )
-    }
+    }*/
+
+    let applist = steam.get_store_app_list(
+        None, None, None, None, None, None, None, None, None
+    ).await.unwrap();
+
+    println!("{:?}", applist);
 }
