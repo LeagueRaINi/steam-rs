@@ -78,6 +78,7 @@ mod macros; // This remains private
 
 const BASE: &str = "https://api.steampowered.com";
 
+#[derive(Clone)]
 pub struct Steam {
     api_key: String,
 }
